@@ -1,0 +1,120 @@
+/* Add your CSS here to style your valentines day page */
+@font-face {
+    font-family: mid;
+    src: url("https://fonts.googleapis.com/css2?family=IM+Fell+English&family=UnifrakturCook:wght@700&display=swap");
+}
+/* Base variables (light mode by default) */
+:root {
+    --bg: #f7f2e9;              /* parchment */
+    --text: #3b1f1a;            /* ink brown */
+    --accent: #b33a3a;          /* medieval red */
+    --accent-light: #d97a7a;
+    --card-bg: #fff8f0;
+    --border: #c9b8a6;
+    --font-main: "IM Fell English", serif;
+    --font-decorative: "UnifrakturCook", cursive;
+}
+
+/* Dark mode overrides */
+body.dark {
+    --bg: #1a1410;              /* deep brown-black */
+    --text: #f3e9d7;            /* warm parchment text */
+    --accent: #e06b6b;
+    --accent-light: #f2a3a3;
+    --card-bg: #2a221c;
+    --border: #5a4a3c;
+    body.dark {
+    background:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,0.1), transparent 70%),
+        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.05), transparent 60%),
+        linear-gradient(135deg, #1a1410, #2a221c);
+}
+}
+img{
+    width: 450px;
+    border-radius: 20px;
+}
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background 0.4s ease, color 0.4s ease;
+    text-align: center;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,0.6), transparent 70%),
+        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.4), transparent 60%),
+        linear-gradient(135deg, #f7f2e9, #e8dcc4);
+    background-attachment: fixed;
+    cursor: url("../images/cursor.png") 4 0, auto;
+
+}
+
+header, footer {
+    background: var(--card-bg);
+    border-bottom: 3px solid var(--border);
+    padding: 1rem;
+    text-align: center;
+    font-family: var(--font-decorative);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+}
+
+nav li {
+    font-family: var(--font-decorative);
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--accent);
+    transition: color 0.3s ease;
+}
+
+nav li:hover {
+    color: var(--accent-light);
+}
+h1 {
+    font-family: var(--font-decorative);
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--accent);
+    text-shadow: 0 0 8px var(--accent-light);
+}
+section {
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    width: min(700px, 90%);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+section h2 {
+    font-family: var(--font-decorative);
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+#theme-toggle {
+    background: var(--accent);
+    color: var(--card-bg);
+    border: 2px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    transition: background 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: var(--accent-light);
+}
